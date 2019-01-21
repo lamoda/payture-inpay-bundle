@@ -1,0 +1,42 @@
+{
+  "name": "lamoda/payture-inpay-bundle",
+  "license": "MIT",
+  "description": "Client Bundle for Payture InPay API",
+  "keywords": [
+    "payture",
+    "payment",
+    "api",
+    "client",
+    "bundle"
+  ],
+  "type": "symfony-bundle",
+  "authors": [
+    {
+      "name": "Lamoda developers",
+      "homepage": "https://tech.lamoda.ru/"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Lamoda\\Payture\\InPayBundle\\": "./src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Lamoda\\Payture\\InPayBundle\\Tests\\": "./tests/"
+    }
+  },
+  "require": {
+    "php": "^7.1",
+    "lamoda/payture-inpay-client": "dev-master",
+    "symfony/http-kernel": "^3.4 || ^4.0",
+    "symfony/config": "^3.4 || ^4.0",
+    "symfony/dependency-injection": "^3.4 || ^4.0",
+    "symfony/yaml": "^3.4 || ^4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5",
+    "symfony/framework-bundle": "^3.4 || ^4.0",
+    "friendsofphp/php-cs-fixer": "^2.14"
+  }
+}

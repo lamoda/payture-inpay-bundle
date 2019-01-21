@@ -1,0 +1,19 @@
+imports:
+  { resource: common.yaml }
+
+payture_inpay:
+  terminals:
+    TestTerminal:
+      auth:
+        key: MerchantKey
+        password: MerchantPassword
+        url: https://sandbox.payture.com/
+    ShouldBeFastTerminal:
+      auth:
+        key: MerchantKey
+        password: MerchantPassword
+        url: https://sandbox.payture.com/
+      operations:
+        Init:
+          timeout: 2
+          connect_timeout: 0.5

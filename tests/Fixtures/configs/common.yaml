@@ -1,0 +1,4 @@
+services:
+  test_registry:
+    alias: Lamoda\Payture\InPayBundle\Terminal\TerminalRegistry
+    public: true
