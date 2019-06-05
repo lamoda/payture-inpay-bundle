@@ -1,6 +1,6 @@
 # Payture InPay Client Bundle
 
-Wrapper bundle for [lamoda/payture-inpay-client](https://github.com/lamoda/payture-inpay-client)
+Wrapper bundle for [lamoda/payture-inpay-php-client](https://github.com/lamoda/payture-inpay-php-client)
 
 ## Installation
 
