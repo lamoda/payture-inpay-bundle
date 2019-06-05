@@ -59,3 +59,105 @@ for global setting or `payture_inpay.terminals.<TerminalName>.operations` for te
 You can configure `payture_inpay.logging` with logger service ID to be passed to all inner services of bundle.
 
 Also you can configure generic Guzzle [logging middleware](http://docs.guzzlephp.org/en/stable/handlers-and-middleware.html). 
+
+## Configuration reference
+
+```yaml
+payture_inpay:
+    terminals:
+
+        # Prototype
+        name:
+            name:                 ~
+
+            # Terminal authentication data
+            auth:                 # Required
+
+                # Terminal operation URL
+                url:                  ~ # Required, Example: https://sandbox.payture.com/
+
+                # Terminal identification Key
+                key:                  ~ # Required, Example: Merchant
+
+                # Terminal identification Password
+                password:             ~ # Required, Example: Secret
+            operations:
+                Init:
+
+                    # Operation timeout, seconds
+                    timeout:              null
+
+                    # Connection timeout for operation, seconds
+                    connect_timeout:      null
+                Charge:
+
+                    # Operation timeout, seconds
+                    timeout:              null
+
+                    # Connection timeout for operation, seconds
+                    connect_timeout:      null
+                Unblock:
+
+                    # Operation timeout, seconds
+                    timeout:              null
+
+                    # Connection timeout for operation, seconds
+                    connect_timeout:      null
+                Refund:
+
+                    # Operation timeout, seconds
+                    timeout:              null
+
+                    # Connection timeout for operation, seconds
+                    connect_timeout:      null
+                PayStatus:
+
+                    # Operation timeout, seconds
+                    timeout:              null
+
+                    # Connection timeout for operation, seconds
+                    connect_timeout:      null
+    default_options:
+        operations:
+            Init:
+
+                # Operation timeout, seconds
+                timeout:              30 # Required
+
+                # Connection timeout for operation, seconds
+                connect_timeout:      5 # Required
+            Charge:
+
+                # Operation timeout, seconds
+                timeout:              30 # Required
+
+                # Connection timeout for operation, seconds
+                connect_timeout:      5 # Required
+            Unblock:
+
+                # Operation timeout, seconds
+                timeout:              30 # Required
+
+                # Connection timeout for operation, seconds
+                connect_timeout:      5 # Required
+            Refund:
+
+                # Operation timeout, seconds
+                timeout:              30 # Required
+
+                # Connection timeout for operation, seconds
+                connect_timeout:      5 # Required
+            PayStatus:
+
+                # Operation timeout, seconds
+                timeout:              30 # Required
+
+                # Connection timeout for operation, seconds
+                connect_timeout:      5 # Required
+
+    # Guzzle client service ID. New one will be created if none provided
+    guzzle_client:        null
+
+    # Logger service ID. No logger by default
+    logger:               null
+```
