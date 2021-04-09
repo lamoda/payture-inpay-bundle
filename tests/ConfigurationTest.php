@@ -11,7 +11,6 @@ final class ConfigurationTest extends TestCase
     /**
      * @dataProvider getValidConfigurations
      *
-     * @param string $config
      * @param string[] $expectedTerminals
      */
     public function testValidConfigurations(string $config, array $expectedTerminals): void
