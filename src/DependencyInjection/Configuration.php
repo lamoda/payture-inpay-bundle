@@ -57,6 +57,7 @@ final class Configuration implements ConfigurationInterface
         $this->configureOperation($operations, PaytureOperation::UNBLOCK, $required);
         $this->configureOperation($operations, PaytureOperation::REFUND, $required);
         $this->configureOperation($operations, PaytureOperation::PAY_STATUS, $required);
+        $this->configureOperation($operations, PaytureOperation::GET_STATE, $required);
     }
 
     private function configureOperation(ArrayNodeDefinition $operations, string $name, bool $required = false): void

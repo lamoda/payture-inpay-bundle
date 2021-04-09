@@ -90,9 +90,7 @@ final class PaytureInPayExtension extends Extension implements CompilerPassInter
         foreach ($container->findTaggedServiceIds('payture.terminal') as $id => $tags) {
             foreach ($tags as $tag) {
                 if (empty($tag['name'])) {
-                    throw new \RuntimeException(
-                        sprintf('Invalid "payture.terminal" tag configuration for "%s": no name provided', $id)
-                    );
+                    throw new \RuntimeException(sprintf('Invalid "payture.terminal" tag configuration for "%s": no name provided', $id));
                 }
 
                 $registry->addMethodCall('add', [$tag['name'], new Reference($id)]);
