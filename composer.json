@@ -28,7 +28,7 @@
   },
   "require": {
     "php": "^7.1",
-    "lamoda/payture-inpay-client": "^1.0",
+    "lamoda/payture-inpay-client": "^1.1",
     "symfony/http-kernel": "^3.4 || ^4.0",
     "symfony/config": "^3.4 || ^4.0",
     "symfony/dependency-injection": "^3.4 || ^4.0",
